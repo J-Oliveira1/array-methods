@@ -233,39 +233,86 @@ let dishes = [
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
-function problemSix(){
+// function problemSix(){
+//     let results;
+//     results = dishes.filter(function(dish){
+//         if(dish.ingredients.includes('chickpea')){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+//  let includesOption = problemSix();
+//  console.log(includesOption)
+
+//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
+//Filter
+
+// function problemSeven(){
+//     let response = prompt('Name one ingredient.')
+//     let results = dishes.filter(function(dish){
+//         if( dish.ingredients.includes(response)){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }
+//     })
+//     return results;
+// }
+// let userIngredient = problemSeven();
+// console.log(userIngredient)
+
+//8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
+//Map
+
+// function problemEight(){
+//     let results;
+//     results = dishes.map(function(dish){
+//         return dish.cuisine;
+//     })
+//     return results
+// }
+// let foodTypes = problemEight();
+// console.log(foodTypes)
+
+//9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
+//Map 
+
+// function problemNine(){
+//     let results;
+//     results = dishes.map(function(dish){
+//         return dish.cuisine + ' ' + dish.name;
+//     })
+//     return results;
+// }
+// let dishArray = problemNine();
+// console.log(dishArray)
+
+
+//10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+
+function problemTen(){
     let results;
     results = dishes.filter(function(dish){
-        if(dish.ingredients.includes('chickpea')){
+        if(dish.cuisine == 'Vegetarian'){
             return true;
         }
         else{
             return false;
         }
     })
-    return results;
+    let advancedArray = results.map(function(dish){
+        return `${dish.cuisine} ${dish.name}`
+    })
+    return advancedArray
+
 }
- let includesOption = problemSix();
- console.log(includesOption)
-
-//7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
-//Filter
-
-
-
-//8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
-//Map
-
-
-
-//9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
-//Map 
-
-
-
-//10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
-
-
+let dishesArray = problemTen();
+console.log(dishesArray)
 
 
 
